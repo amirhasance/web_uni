@@ -1,4 +1,4 @@
-const get_gender_by_name = (name) => {
+const get_gender_by_name = (name) => { /*وظیفه ریکوست به ای پی ای و تبدیل آن به ابجکت جی اس */
     var url = "https://api.genderize.io/?name="
     url = url + name
     var xmlHttp = new XMLHttpRequest();
@@ -7,7 +7,7 @@ const get_gender_by_name = (name) => {
     data = JSON.parse(xmlHttp.responseText)
     return data
 }
-const submit_event_handler = (e) => {
+const submit_event_handler = (e) => { /* ایونت هندلر مربوط به کلید سابمیت با توجه به لاجیک*/
     var name = document.getElementById("name_input").value
     for (var i = 0; i < name.length; i++) {
         var char_code = name.charCodeAt(i)
@@ -35,6 +35,7 @@ const submit_event_handler = (e) => {
     }
 }
 const save_event_handler = (e) => {
+    /*ایونت هندلر مربوط به دکمه سیو با توجه به لاجیک*/
     var male_choosed = document.getElementById("male_option").checked
     var female_choosed = document.getElementById("female_option").checked
     var name = document.getElementById("name_input").value
@@ -52,6 +53,7 @@ const save_event_handler = (e) => {
 
 }
 const clear_saved_answer = (e) => {
+    /*ایونت هندلر مربوط به کلیک پاک*/
     var name = document.getElementById("name_input").value
     localStorage.removeItem(name)
     document.getElementById("saved_name").innerText = null
@@ -59,10 +61,6 @@ const clear_saved_answer = (e) => {
     document.getElementById("prediction").innerText = null
 }
 
-const save_name_gender = (name, gender) => {
-    localStorage.setItem(name, gender)
-
-}
 
 
 
