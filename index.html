@@ -1,0 +1,46 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="methods.js"></script>
+</head>
+<body>
+<div class="main-content">
+    <div>
+       <h3>Mr. or Ms.? </h3>
+        <div>
+            <span>Name</span>
+            <input type="text" maxlength="255" id="name_input"/>
+        </div>
+        <div>
+            <input type="radio" id="male_option" />
+            <span>Male</span>
+        </div>
+        <div>
+            <input type="radio" id="female_option"/>
+            <span>Female</span>
+        </div>
+        <div>
+            <input type="button" value="Submit" onclick="submit_event_handler()">
+        </div>
+        <div>
+            <input type="button" value="Save" onclick="save_event_handler()">
+
+        </div>
+    </div>
+    <div >
+        <div style="padding: 10px">
+            <h3>
+                Prediction
+            </h3>
+            <p id="gender"></p>
+            <p id="prediction"></p>
+        </div>
+        <div >
+            <h2>Saved Answer</h2>
+            <p id="saved_name"></p>
+            <input type="button" value="clear" onclick="clear_saved_answer()">
+        </div>
+    </div>
+</div>
+</body>
+</html>
